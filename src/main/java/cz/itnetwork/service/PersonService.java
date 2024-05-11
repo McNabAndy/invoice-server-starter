@@ -5,7 +5,10 @@ import cz.itnetwork.dto.PersonDTO;
 import cz.itnetwork.dto.PersonStatisticDTO;
 
 import java.util.List;
-
+/**
+ * Rozhraní pro služby související s osobamy.
+ * Poskytuje metody pro přidání, aktualizaci, získání a odstranění osob, stejně jako pro získání statistik.
+ */
 public interface PersonService {
 
     /**
