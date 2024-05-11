@@ -26,38 +26,84 @@ import cz.itnetwork.constant.Countries;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
+/**
+ * Data Transfer Object (DTO) reprezentující informace o osobě nebo firmě.
+ * Tento objekt obsahuje kontaktní údaje a identifikační informace nutné pro obchodní transakce.
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class PersonDTO {
 
+    /**
+     * Jedinečný identifikátor faktury.
+     */
     @JsonProperty("_id")
     private Long id;
 
+    /**
+     * Jméno, název firmy
+     */
     private String name;
 
+    /**
+     * IČO
+     */
     private String identificationNumber;
 
+    /**
+     * DIČ
+     */
     private String taxNumber;
 
+    /**
+     * číslo bankovního účtu bez kodu banky
+     */
     private String accountNumber;
 
+    /**
+     * Kód banky
+     */
     private String bankCode;
 
+    /**
+     * IBAN bankovního účtu
+     */
     private String iban;
 
+    /**
+     * Telefon
+     */
     private String telephone;
 
+    /**
+     * Email
+     */
     private String mail;
 
+    /**
+     * Ulice
+     */
     private String street;
 
+    /**
+     * PSČ
+     */
     private String zip;
+
+    /**
+     * Město
+     */
 
     private String city;
 
+    /**
+     * země
+     */
     private Countries country;
 
+    /**
+     * Poznámka
+     */
     private String note;
 }

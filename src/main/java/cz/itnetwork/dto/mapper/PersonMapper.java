@@ -21,15 +21,34 @@
  */
 package cz.itnetwork.dto.mapper;
 
+import cz.itnetwork.dto.InvoiceDTO;
 import cz.itnetwork.dto.PersonDTO;
+import cz.itnetwork.entity.InvoiceEntity;
 import cz.itnetwork.entity.PersonEntity;
 import org.mapstruct.Mapper;
 
-
+/**
+ * Mapper rozhraní pro konverzi mezi entitami {@link PersonEntity} a přenosovými objekty {@link PersonDTO}.
+ * Toto rozhraní je používáno pro mapování datových struktur mezi databázovými entitami a daty předávanými na frontend.
+ */
 @Mapper(componentModel = "spring")
 public interface PersonMapper {
 
+
+    /**
+     * Převede {@link PersonDTO} na {@link PersonEntity}.
+     *
+     * @param source DTO reprezentující osobu, která má být převedena na entitu.
+     * @return Entita osoby
+     */
     PersonEntity toEntity(PersonDTO source);
 
+
+    /**
+     * Převede {@link PersonDTO} na {@link PersonEntity}.
+     *
+     * @param source Entita osoby, která má být převedena na DTO.
+     * @return DTO reprezentující osobu
+     */
     PersonDTO toDTO(PersonEntity source);
 }
