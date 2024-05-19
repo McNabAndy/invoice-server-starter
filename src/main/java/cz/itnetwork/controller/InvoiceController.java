@@ -2,8 +2,6 @@ package cz.itnetwork.controller;
 import cz.itnetwork.dto.InvoiceDTO;
 import cz.itnetwork.dto.InvoiceFilter;
 import cz.itnetwork.dto.InvoiceStatisticDTO;
-import cz.itnetwork.dto.PersonDTO;
-import cz.itnetwork.entity.repository.specification.InvoiceSpecification;
 import cz.itnetwork.service.InvoiceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -74,7 +72,7 @@ public class InvoiceController {
 
 
     /**
-     * Vyhledá konrétní fakturu v databázy dle ID
+     * Vyhledá konrétní fakturu v databázi dle ID
      * @param invoiceId ID konkrítní faktury
      * @return Vyhledaná faktura
      */
@@ -113,7 +111,7 @@ public class InvoiceController {
      */
     @GetMapping("invoices/statistics")
     public InvoiceStatisticDTO getInvoiceStatistic(){
-        return invoiceService.getInvoiceStaistic();
+        return invoiceService.getInvoiceStatistics();
     }
 
 }

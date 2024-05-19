@@ -3,7 +3,6 @@ package cz.itnetwork.service;
 import cz.itnetwork.dto.InvoiceDTO;
 import cz.itnetwork.dto.InvoiceFilter;
 import cz.itnetwork.dto.InvoiceStatisticDTO;
-import cz.itnetwork.dto.PersonDTO;
 
 import java.util.List;
 /**
@@ -58,7 +57,7 @@ public interface InvoiceService {
      * Získá statistické údaje o fakturách.
      * @return Objekt DTO s agregovanými statistickými údaji o fakturách.
      */
-    InvoiceStatisticDTO getInvoiceStaistic();
+    InvoiceStatisticDTO getInvoiceStatistics();
 
 
 }

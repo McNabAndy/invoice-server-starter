@@ -75,6 +75,4 @@ public class InvoiceDTO {
      * Informace o prodávajícím - Dodavatel
      */
     private PersonDTO seller;
-
-
 }

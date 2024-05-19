@@ -153,7 +153,7 @@ public class PersonServiceImpl implements PersonService {
     }
 
     /**
-     * Odstranění osoby dle ID (nastaví atribut HIDDEN na "1") v databázy
+     * Odstranění osoby dle ID (nastaví atribut HIDDEN na "1") v databázi
      * @param personId Person to delete
      */
     @Override
@@ -201,7 +201,7 @@ public class PersonServiceImpl implements PersonService {
 
 
 
-    // region: Private methods
+    // region Private methods
     /**
      * <p>Attempts to fetch a person.</p>
      * <p>In case a person with the passed [id] doesn't exist a [{@link org.webjars.NotFoundException}] is thrown.</p>
@@ -214,9 +214,6 @@ public class PersonServiceImpl implements PersonService {
         return personRepository.findById(id)
                 .orElseThrow(() -> new NotFoundException("Person with id " + id + " wasn't found in the database."));
     }
-
-
-
 
     // endregion
 }

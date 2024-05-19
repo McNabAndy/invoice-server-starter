@@ -48,8 +48,6 @@ public class InvoiceServiceImpl implements InvoiceService{
     private InvoiceMapper invoiceMapper;
 
 
-    // Implementované metody
-
     /**
      * Přidává novou fakturu na základě přijatých dat ve formátu DTO.
      * Převádí DTO na entitu, ukládá entitu a nastavuje odkazy na prodávajícího a kupujícího.
@@ -65,6 +63,7 @@ public class InvoiceServiceImpl implements InvoiceService{
         saveInvoiceEntity.setBuyer(personRepository.getReferenceById(invoiceDTO.getBuyer().getId()));
         return invoiceMapper.toDTO(saveInvoiceEntity);
     }
+
 
     /**
      * Vrátí seznam všech faktur bez filtru.
@@ -176,7 +175,7 @@ public class InvoiceServiceImpl implements InvoiceService{
      * @return DTO se statistikou faktur
      */
     @Override
-    public InvoiceStatisticDTO getInvoiceStaistic() {
+    public InvoiceStatisticDTO getInvoiceStatistics() {
         List<InvoiceDTO> allInvoice = getAll();
         Date currentYear = new Date();
         long allTimeSum = 0;
